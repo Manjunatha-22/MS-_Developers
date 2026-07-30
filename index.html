@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satva Developers | Luxury Real Estate & Premium Homes in Bangalore</title>
+  <meta name="description" content="Satva Developers - Premier luxury real estate developer in Bengaluru. Discover 2, 3, 4 BHK apartments, luxury villas, gated plots and commercial spaces in Nagarbhavi & prime locations.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Style Sheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner-golden"></div>
+    <div class="preloader-logo">SATVA <span>DEVELOPERS</span></div>
+  </div>
+
+  <!-- Top Bar -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex gap-4">
+        <span><i class="fas fa-map-marker-alt text-secondary me-2"></i>Nagarbhavi, Bengaluru – 560072</span>
+        <span><i class="fas fa-phone-alt text-secondary me-2"></i><a href="tel:+918197287448">+91 8197287448</a></span>
+        <span><i class="fas fa-envelope text-secondary me-2"></i><a href="mailto:info@satvadevelopers.in">info@satvadevelopers.in</a></span>
+      </div>
+      <div class="d-flex gap-3">
+        <a href="wishlist.html" title="Wishlist"><i class="far fa-heart"></i> Wishlist</a>
+        <a href="compare.html" title="Compare"><i class="fas fa-balance-scale"></i> Compare</a>
+        <a href="login.html"><i class="fas fa-user-circle"></i> Login / Register</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-building text-secondary"></i> SATVA <span class="gold-accent">DEVELOPERS</span>
+      </a>
+      
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <a href="wishlist.html" class="badge-icon-btn" title="Wishlist">
+          <i class="far fa-heart"></i>
+          <span class="badge-count" id="wishlist-count-badge">0</span>
+        </a>
+        <a href="compare.html" class="badge-icon-btn" title="Compare">
+          <i class="fas fa-balance-scale"></i>
+          <span class="badge-count" id="compare-count-badge">0</span>
+        </a>
+        <button class="badge-icon-btn" id="theme-toggle-btn" title="Toggle Dark/Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. HERO BANNER -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <div class="hero-badges">
+            <div class="hero-badge-item"><i class="fas fa-certificate text-secondary"></i> RERA Approved Projects</div>
+            <div class="hero-badge-item"><i class="fas fa-award text-secondary"></i> 15+ Years Excellence</div>
+          </div>
+          <h1 class="hero-title">Architecting <span>Luxury Living</span> in Bengaluru</h1>
+          <p class="hero-subtitle">Discover ultra-premium apartments, bespoke villas, and strategic commercial hubs designed for sophisticated lifestyles and high returns.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="properties.html" class="btn btn-gold btn-lg"><i class="fas fa-search me-2"></i>Explore Properties</a>
+            <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#siteVisitModal"><i class="fas fa-calendar-check me-2"></i>Book Site Visit</button>
+          </div>
+        </div>
+        
+        <!-- 2. PROPERTY QUICK SEARCH TAB -->
+        <div class="col-lg-5">
+          <div class="hero-search-wrapper">
+            <h4 class="mb-3 text-center"><i class="fas fa-search-location text-secondary me-2"></i>Find Your Dream Property</h4>
+            <ul class="nav nav-tabs search-tabs nav-fill" role="tablist">
+              <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#searchBuy">Buy</a></li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#searchRent">Rent</a></li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#searchPlot">Plots</a></li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#searchComm">Commercial</a></li>
+            </ul>
+            <form action="properties.html" method="GET">
+              <div class="mb-3">
+                <label class="form-label small fw-bold">Location / Area</label>
+                <select class="form-select form-select-custom" name="location">
+                  <option value="">Select Location</option>
+                  <option value="Nagarbhavi">Nagarbhavi, Bengaluru</option>
+                  <option value="Indiranagar">Indiranagar, Bengaluru</option>
+                  <option value="Whitefield">Whitefield, Bengaluru</option>
+                  <option value="Yelahanka">Yelahanka, Bengaluru</option>
+                </select>
+              </div>
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <label class="form-label small fw-bold">Property Type</label>
+                  <select class="form-select form-select-custom" name="type">
+                    <option value="">All Types</option>
+                    <option value="Apartments">Apartments</option>
+                    <option value="Villas">Villas</option>
+                    <option value="Plots">Plots</option>
+                    <option value="Commercial">Commercial</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <label class="form-label small fw-bold">BHK</label>
+                  <select class="form-select form-select-custom" name="bhk">
+                    <option value="">Any BHK</option>
+                    <option value="2 BHK">2 BHK</option>
+                    <option value="3 BHK">3 BHK</option>
+                    <option value="4 BHK">4 BHK / Villa</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-emerald w-100 py-3"><i class="fas fa-search me-2"></i>Search Properties</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. FEATURED PROPERTIES -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-tag">Exclusive Listings</span>
+        <h2 class="section-title">Featured Properties</h2>
+        <p class="section-subtitle">Handpicked luxury residences with world-class amenities and prime connectivity.</p>
+      </div>
+
+      <div class="row g-4" id="home-featured-properties-container">
+        <!-- Rendered via JS -->
+      </div>
+      <div class="text-center mt-4">
+        <a href="properties.html" class="btn btn-outline-emerald"><i class="fas fa-list me-2"></i>View All Properties</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. WHY CHOOSE SATVA DEVELOPERS -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <span class="section-tag">Our Promise</span>
+          <h2 class="section-title">Why Choose Satva Developers?</h2>
+          <p class="text-muted mb-4">We combine architectural brilliance, transparent documentation, and on-time delivery to create generational landmarks in Bengaluru.</p>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-shield-alt"></i></div>
+            <div>
+              <h5>100% Legal & RERA Compliant</h5>
+              <p class="text-muted mb-0">Every project undergoes rigorous legal verification and complete clear-title documentation.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-hard-hat"></i></div>
+            <div>
+              <h5>Superior Construction Quality</h5>
+              <p class="text-muted mb-0">Built using Grade-A German shuttering technology, earthquake-resistant RCC structures & premium finishes.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h5>On-Time Handover Guarantee</h5>
+              <p class="text-muted mb-0">Strict project milestones ensuring timely handover with penalty protection for buyers.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Why Choose Us" class="img-fluid rounded-4 shadow-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PROPERTY CATEGORIES -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-tag">Explore Portfolio</span>
+        <h2 class="section-title">Property Categories</h2>
+        <p class="section-subtitle">Tailored living and investment choices suited for your exact preferences.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-3 col-6">
+          <a href="properties.html?type=Apartments" class="category-card d-block">
+            <div class="category-icon"><i class="fas fa-building"></i></div>
+            <h5>Luxury Apartments</h5>
+            <p class="text-muted small mb-0">2, 3 & 4 BHK Sky Homes</p>
+          </a>
+        </div>
+        <div class="col-md-3 col-6">
+          <a href="properties.html?type=Villas" class="category-card d-block">
+            <div class="category-icon"><i class="fas fa-home"></i></div>
+            <h5>Independent Villas</h5>
+            <p class="text-muted small mb-0">Bespoke Triplex Mansions</p>
+          </a>
+        </div>
+        <div class="col-md-3 col-6">
+          <a href="properties.html?type=Plots" class="category-card d-block">
+            <div class="category-icon"><i class="fas fa-map"></i></div>
+            <h5>Gated Plots</h5>
+            <p class="text-muted small mb-0">BDA & BMRDA Approved</p>
+          </a>
+        </div>
+        <div class="col-md-3 col-6">
+          <a href="properties.html?type=Commercial" class="category-card d-block">
+            <div class="category-icon"><i class="fas fa-briefcase"></i></div>
+            <h5>Commercial Hubs</h5>
+            <p class="text-muted small mb-0">Offices & Retail Outlets</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. LATEST PROPERTY OFFERS BANNER -->
+  <section class="py-4">
+    <div class="container">
+      <div class="offer-banner">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="offer-badge mb-2 d-inline-block"><i class="fas fa-gift me-1"></i> Festive Special Offer</span>
+            <h3 class="text-white font-weight-bold">Zero Processing Fees & Free Modular Kitchen Package!</h3>
+            <p class="mb-0 text-white-50">Book any 3 BHK residence at Satva Emerald Horizons before month end to claim instant ₹5 Lakh benefits.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <button class="btn btn-gold btn-lg" data-bs-toggle="modal" data-bs-target="#callbackModal"><i class="fas fa-phone-alt me-2"></i>Claim Offer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 & 8. ONGOING & UPCOMING PROJECTS -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-tag">Landmarks in Progress</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Explore ongoing construction masterpieces and upcoming pre-launch developments.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Ongoing Project">
+            <div class="project-overlay">
+              <span class="badge bg-success w-auto mb-2 align-self-start">Ongoing Project</span>
+              <h4>Satva Horizon Heights</h4>
+              <p><i class="fas fa-map-marker-alt me-1"></i> Nagarbhavi, Bengaluru</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span>Possession: Dec 2026</span>
+                <a href="projects.html" class="btn btn-gold btn-sm">Explore Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Upcoming Project">
+            <div class="project-overlay">
+              <span class="badge bg-warning text-dark w-auto mb-2 align-self-start">Upcoming Launch</span>
+              <h4>Satva Serene Valley Villas</h4>
+              <p><i class="fas fa-map-marker-alt me-1"></i> Yelahanka, Bengaluru</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span>Pre-Launch Booking Open</span>
+                <a href="projects.html" class="btn btn-gold btn-sm">Explore Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. PREMIUM SERVICES -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-tag">End-To-End Support</span>
+        <h2 class="section-title">Premium Real Estate Services</h2>
+        <p class="section-subtitle">Complete property assistance from legal verification to easy home loan sanctioning.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="ms-card p-4 h-100">
+            <div class="feature-box-icon mb-3"><i class="fas fa-hand-holding-usd"></i></div>
+            <h4>Home Loan Assistance</h4>
+            <p class="text-muted">Instant home loan approvals with lowest interest rates through partner banks like HDFC, SBI, and ICICI.</p>
+            <a href="services.html" class="text-secondary fw-bold">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="ms-card p-4 h-100">
+            <div class="feature-box-icon mb-3"><i class="fas fa-file-contract"></i></div>
+            <h4>Legal & Title Verification</h4>
+            <p class="text-muted">Comprehensive title search, legal vetting, khata transfer, and registration support by expert advocate panel.</p>
+            <a href="services.html" class="text-secondary fw-bold">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="ms-card p-4 h-100">
+            <div class="feature-box-icon mb-3"><i class="fas fa-chart-line"></i></div>
+            <h4>Property Investment Advisory</h4>
+            <p class="text-muted">Data-backed real estate portfolio management ensuring high rental yield and capital appreciation.</p>
+            <a href="services.html" class="text-secondary fw-bold">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. STATISTICS COUNTER -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3 col-6">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Years of Trust</div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-number">5,000+</div>
+          <div class="stat-label">Happy Families</div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-number">4.5M+</div>
+          <div class="stat-label">Sq. Ft. Delivered</div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-number">25+</div>
+          <div class="stat-label">Completed Projects</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. EMI CALCULATOR WIDGET -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <span class="section-tag">Financial Planning</span>
+          <h2 class="section-title">Home Loan EMI Calculator</h2>
+          <p class="text-muted">Estimate your monthly home loan repayments instantly with real-time interest sliders.</p>
+          <a href="emi-calculator.html" class="btn btn-emerald mt-2"><i class="fas fa-calculator me-2"></i>Full EMI Calculator</a>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="calculator-box">
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <label class="fw-bold">Loan Amount (₹)</label>
+                <span class="fw-bold text-secondary" id="emiLoanVal">₹ 50,00,000</span>
+              </div>
+              <input type="range" class="form-range range-slider-custom" id="emiLoanAmount" min="1000000" max="50000000" step="500000" value="5000000">
+            </div>
+
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <label class="fw-bold">Interest Rate (%)</label>
+                <span class="fw-bold text-secondary" id="emiInterestVal">8.5 %</span>
+              </div>
+              <input type="range" class="form-range range-slider-custom" id="emiInterestRate" min="6.5" max="14" step="0.1" value="8.5">
+            </div>
+
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <label class="fw-bold">Loan Tenure (Years)</label>
+                <span class="fw-bold text-secondary" id="emiTenureVal">20 Years</span>
+              </div>
+              <input type="range" class="form-range range-slider-custom" id="emiTenure" min="5" max="30" step="1" value="20">
+            </div>
+
+            <div class="calc-result-card">
+              <small class="text-muted text-uppercase fw-bold">Estimated Monthly EMI</small>
+              <div class="calc-result-val" id="resMonthlyEmi">₹ 43,391</div>
+              <div class="row text-center mt-3 pt-3 border-top">
+                <div class="col-6">
+                  <small class="text-muted d-block">Total Interest</small>
+                  <span class="fw-bold" id="resTotalInterest">₹ 54,13,879</span>
+                </div>
+                <div class="col-6">
+                  <small class="text-muted d-block">Total Payable</small>
+                  <span class="fw-bold" id="resTotalPayment">₹ 1,04,13,879</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 17. PARTNER BANKS -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-tag">Approved By Top Lenders</span>
+        <h2 class="section-title">Our Partner Banks</h2>
+      </div>
+
+      <div class="row g-3 text-center">
+        <div class="col-md-2 col-4"><div class="bank-logo-card"><i class="fas fa-university fa-2x mb-2 d-block"></i>HDFC Bank</div></div>
+        <div class="col-md-2 col-4"><div class="bank-logo-card"><i class="fas fa-building fa-2x mb-2 d-block"></i>SBI Home</div></div>
+        <div class="col-md-2 col-4"><div class="bank-logo-card"><i class="fas fa-landmark fa-2x mb-2 d-block"></i>ICICI Bank</div></div>
+        <div class="col-md-2 col-4"><div class="bank-logo-card"><i class="fas fa-piggy-bank fa-2x mb-2 d-block"></i>Axis Bank</div></div>
+        <div class="col-md-2 col-4"><div class="bank-logo-card"><i class="fas fa-coins fa-2x mb-2 d-block"></i>Kotak Mahindra</div></div>
+        <div class="col-md-2 col-4"><div class="bank-logo-card"><i class="fas fa-vault fa-2x mb-2 d-block"></i>Canara Bank</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 21. CONSTRUCTION PROCESS -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-tag">Quality Execution</span>
+        <h2 class="section-title">Our 4-Step Construction Process</h2>
+        <p class="section-subtitle">How we transform raw land into architectural masterpieces.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h5 class="text-primary">1. Architectural Blueprint & Clearances</h5>
+            <p class="text-muted mb-0">BDA approval, environmental clearances & structural load simulation by certified engineers.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h5 class="text-primary">2. German Formwork & Foundation</h5>
+            <p class="text-muted mb-0">Deep pile foundation and monolithic RCC cast structures for high seismic stability.</p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h5 class="text-primary">3. Premium Interior Fitting & Finishing</h5>
+            <p class="text-muted mb-0">Italian marble installation, Schneider electricals, Grohe bath fittings & double-glazed windows.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h5 class="text-primary">4. Quality Audit & OC Handover</h5>
+            <p class="text-muted mb-0">50-point audit, Occupancy Certificate (OC) procurement and key handover ceremony.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16. FAQ SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-tag">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="accordion custom-accordion mx-auto" id="homeFaq" style="max-width: 800px;">
+        <div class="accordion-item mb-3 border rounded">
+          <h2 class="accordion-header">
+            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              Are all Satva Developers projects RERA registered?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#homeFaq">
+            <div class="accordion-body text-muted">
+              Yes, 100% of our residential and commercial developments are registered with Karnataka RERA. All document numbers are listed on respective project pages.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3 border rounded">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              What home loan assistance do you provide?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#homeFaq">
+            <div class="accordion-body text-muted">
+              We have dedicated desk managers from HDFC, SBI, ICICI, and Axis Bank stationed at our Nagarbhavi head office to process doorstep home loan sanctions within 72 hours.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3 border rounded">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Can I schedule a free site visit?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#homeFaq">
+            <div class="accordion-body text-muted">
+              Absolutely! We offer free pick-up and drop-off facility in AC luxury cabs for site visits anywhere in Bengaluru. Click "Book Site Visit" to choose your date.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 23. NEWSLETTER SUBSCRIPTION -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="bg-emerald text-white rounded-4 p-5 text-center" style="background: var(--primary);">
+        <h3 class="text-white mb-2">Subscribe to Exclusive Pre-Launch Alerts</h3>
+        <p class="text-white-50 mb-4">Get early-bird pricing and real estate market analysis straight to your inbox.</p>
+        <form class="row g-2 justify-content-center" onsubmit="event.preventDefault(); showToast('Subscribed successfully to pre-launch alerts!', 'success'); this.reset();" style="max-width: 600px; margin: 0 auto;">
+          <div class="col-8">
+            <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+          </div>
+          <div class="col-4">
+            <button type="submit" class="btn btn-gold btn-lg w-100">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 24 & 25. CONTACT & GOOGLE MAP -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Visit Corporate Head Office</h2>
+          <p class="text-muted mb-4">Have questions about our ongoing projects? Drop by our Nagarbhavi office or send an enquiry.</p>
+
+          <div class="mb-3 d-flex align-items-center gap-3">
+            <div class="feature-box-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h6 class="mb-0">Office Address</h6>
+              <small class="text-muted">Satva Developers, No. 25, 1st Main Road, Nagarbhavi, Bengaluru – 560072, Karnataka</small>
+            </div>
+          </div>
+
+          <div class="mb-3 d-flex align-items-center gap-3">
+            <div class="feature-box-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h6 class="mb-0">Phone Hotline</h6>
+              <small class="text-muted">+91 8197287448</small>
+            </div>
+          </div>
+
+          <div class="mb-3 d-flex align-items-center gap-3">
+            <div class="feature-box-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h6 class="mb-0">Email Enquiry</h6>
+              <small class="text-muted">info@satvadevelopers.in</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="rounded-4 overflow-hidden shadow-sm h-100" style="min-height: 350px;">
+            <iframe title="Satva Developers Nagarbhavi Office Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.978255909247!2d77.5113!3d12.9734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dd59d29841f%3A0x6b9d628867a0a0!2sNagarbhavi%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 26. FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand text-white mb-3 d-block" href="index.html">
+            <i class="fas fa-building text-secondary"></i> SATVA <span class="gold-accent">DEVELOPERS</span>
+          </a>
+          <p class="text-white-50">Bengaluru's premier real estate developer crafting benchmark luxury apartments, villas, and commercial spaces with timeless elegance.</p>
+          <div class="mt-3">
+            <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h5>Portals</h5>
+          <ul>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="compare.html">Compare Properties</a></li>
+            <li><a href="emi-calculator.html">EMI Calculator</a></li>
+            <li><a href="dashboard.html">User Dashboard</a></li>
+            <li><a href="admin.html">Admin Panel</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5>Head Office</h5>
+          <p class="text-white-50 small mb-2"><i class="fas fa-map-marker-alt text-secondary me-2"></i>No. 25, 1st Main Road, Nagarbhavi, Bengaluru – 560072</p>
+          <p class="text-white-50 small mb-2"><i class="fas fa-phone-alt text-secondary me-2"></i>+91 8197287448</p>
+          <p class="text-white-50 small mb-4"><i class="fas fa-envelope text-secondary me-2"></i>info@satvadevelopers.in</p>
+          <div>
+            <a href="privacy.html" class="text-white-50 small me-3">Privacy Policy</a>
+            <a href="terms.html" class="text-white-50 small">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Satva Developers. All Rights Reserved. Designed & Developed for Luxury Real Estate Excellence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK ACTION BUTTONS -->
+  <div class="floating-actions">
+    <a href="https://wa.me/918197287448?text=Hi%20Satva%20Developers,%20I%20am%20interested%20in%20your%20properties." target="_blank" class="floating-btn btn-whatsapp" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+918197287448" class="floating-btn btn-call" title="Call Now"><i class="fas fa-phone-alt"></i></a>
+    <button class="floating-btn btn-email-float" data-bs-toggle="modal" data-bs-target="#callbackModal" title="Request Callback"><i class="fas fa-headset"></i></button>
+    <button class="floating-btn btn-scroll-top" id="btn-scroll-top" title="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+  </div>
+
+  <!-- SITE VISIT MODAL -->
+  <div class="modal fade" id="siteVisitModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white" style="background: var(--primary) !important;">
+          <h5 class="modal-header-title text-white"><i class="fas fa-calendar-alt text-secondary me-2"></i>Book a Free VIP Site Visit</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="siteVisitForm">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="visitName" required placeholder="John Doe">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mobile Number</label>
+              <input type="tel" class="form-control" id="visitPhone" required placeholder="+91 8197287448">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" id="visitDate" required>
+            </div>
+            <button type="submit" class="btn btn-gold w-100">Confirm Site Visit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALLBACK MODAL -->
+  <div class="modal fade" id="callbackModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white" style="background: var(--primary) !important;">
+          <h5 class="modal-header-title text-white"><i class="fas fa-phone-volume text-secondary me-2"></i>Request Instant Callback</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="callbackForm">
+            <div class="mb-3">
+              <label class="form-label">Your Phone Number</label>
+              <input type="tel" class="form-control" id="callbackPhone" required placeholder="+91 8197287448">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Preferred Time</label>
+              <select class="form-select">
+                <option>Immediate (Within 15 Mins)</option>
+                <option>Morning (10 AM - 1 PM)</option>
+                <option>Evening (4 PM - 7 PM)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-emerald w-100">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/emi.js"></script>
+  <script>
+    // Inline Script to render featured properties on index.html
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('home-featured-properties-container');
+      if (container) {
+        const props = JSON.parse(localStorage.getItem('ms_properties') || '[]').slice(0, 3);
+        let html = '';
+        props.forEach(p => {
+          html += `
+            <div class="col-md-4">
+              <div class="ms-card h-100">
+                <div class="property-card-img-wrapper">
+                  <img src="${p.image}" alt="${p.title}">
+                  <span class="property-badge ${p.badge === 'Featured' ? 'featured' : ''}">${p.badge || p.category}</span>
+                  <div class="property-actions-overlay">
+                    <button class="btn-overlay-action" title="Add Wishlist" onclick="toggleWishlist('${p.id}')">
+                      <i class="far fa-heart"></i>
+                    </button>
+                    <button class="btn-overlay-action" title="Compare" onclick="toggleCompare('${p.id}')">
+                      <i class="fas fa-balance-scale"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <div class="property-price-tag mb-1">${p.priceDisplay}</div>
+                  <h5 class="card-title mb-1"><a href="property-details.html?id=${p.id}">${p.title}</a></h5>
+                  <p class="text-muted small mb-2"><i class="fas fa-map-marker-alt text-secondary me-1"></i> ${p.location}</p>
+                  <div class="property-features">
+                    <span><i class="fas fa-bed"></i> ${p.bhk}</span>
+                    <span><i class="fas fa-bath"></i> ${p.bathrooms} Baths</span>
+                    <span><i class="fas fa-ruler-combined"></i> ${p.sqft} sqft</span>
+                  </div>
+                  <div class="d-flex gap-2 mt-3">
+                    <a href="property-details.html?id=${p.id}" class="btn btn-outline-emerald btn-sm flex-grow-1">Details</a>
+                    <button class="btn btn-gold btn-sm" data-bs-toggle="modal" data-bs-target="#siteVisitModal">Book Visit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        container.innerHTML = html;
+      }
+    });
+  </script>
+</body>
+</html>

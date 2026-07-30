@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Portal | MS Developers Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top custom-navbar border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-user-shield text-secondary"></i> MS <span class="gold-accent">ADMIN PANEL</span>
+      </a>
+      <div class="d-flex align-items-center gap-3">
+        <span class="badge bg-danger">Super Admin</span>
+        <a href="index.html" class="btn btn-outline-secondary btn-sm"><i class="fas fa-globe me-1"></i>View Site</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid px-0">
+    <div class="row g-0">
+      
+      <!-- Sidebar -->
+      <div class="col-lg-2">
+        <div class="admin-sidebar">
+          <div class="text-white-50 small text-uppercase mb-3 px-2">Navigation</div>
+          <a href="#adminProps" class="admin-menu-link active" data-bs-toggle="pill"><i class="fas fa-building"></i> Manage Properties</a>
+          <a href="#adminVisits" class="admin-menu-link" data-bs-toggle="pill"><i class="fas fa-calendar-check"></i> Site Visit Leads</a>
+          <a href="#adminUsers" class="admin-menu-link" data-bs-toggle="pill"><i class="fas fa-users"></i> Registered Users</a>
+          <a href="#adminNews" class="admin-menu-link" data-bs-toggle="pill"><i class="fas fa-envelope-open-text"></i> Newsletter List</a>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-lg-10 p-4">
+        
+        <div class="tab-content">
+          <!-- Properties Tab -->
+          <div class="tab-pane fade show active" id="adminProps">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h4>Property Catalogue Management</h4>
+              <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#addPropertyModal"><i class="fas fa-plus me-2"></i>Add New Listing</button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table admin-table align-middle">
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>Property Title</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminPropertyTableBody">
+                  <!-- Rendered via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Site Visits Tab -->
+          <div class="tab-pane fade" id="adminVisits">
+            <h4 class="mb-4">Booked VIP Site Visits</h4>
+            <div class="table-responsive">
+              <table class="table admin-table align-middle">
+                <thead>
+                  <tr>
+                    <th>Buyer Name</th>
+                    <th>Phone</th>
+                    <th>Requested Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Rajesh Gowda</td>
+                    <td>+91 8197287448</td>
+                    <td>Aug 05, 2026</td>
+                    <td><span class="badge bg-success">Confirmed</span></td>
+                  </tr>
+                  <tr>
+                    <td>Priya Sharma</td>
+                    <td>+91 9812345678</td>
+                    <td>Aug 08, 2026</td>
+                    <td><span class="badge bg-warning text-dark">Pending Driver</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Users Tab -->
+          <div class="tab-pane fade" id="adminUsers">
+            <h4 class="mb-4">Registered Portal Users</h4>
+            <div class="table-responsive">
+              <table class="table admin-table align-middle">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Role</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>System Admin</td>
+                    <td>admin@msdevelopers.in</td>
+                    <td>+91 8197287448</td>
+                    <td><span class="badge bg-danger">Admin</span></td>
+                  </tr>
+                  <tr>
+                    <td>Demo User</td>
+                    <td>user@msdevelopers.in</td>
+                    <td>+91 9123456789</td>
+                    <td><span class="badge bg-info text-dark">User</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Newsletter Tab -->
+          <div class="tab-pane fade" id="adminNews">
+            <h4 class="mb-4">Pre-Launch Newsletter Subscribers</h4>
+            <div class="table-responsive">
+              <table class="table admin-table align-middle">
+                <thead>
+                  <tr>
+                    <th>Subscriber Email</th>
+                    <th>Subscribed Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>investor@bengaluru-realty.com</td>
+                    <td>July 29, 2026</td>
+                  </tr>
+                  <tr>
+                    <td>anand.v@techcorp.in</td>
+                    <td>July 30, 2026</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Property Modal -->
+  <div class="modal fade" id="addPropertyModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white" style="background: var(--primary) !important;">
+          <h5 class="modal-title text-white"><i class="fas fa-plus-circle text-secondary me-2"></i>Add New Real Estate Property</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="adminAddPropertyForm">
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Property Title</label>
+                <input type="text" class="form-control" id="admPropTitle" required placeholder="e.g. MS Lakeview Enclave">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Category</label>
+                <select class="form-select" id="admPropCategory">
+                  <option value="Apartments">Apartments</option>
+                  <option value="Villas">Villas</option>
+                  <option value="Plots">Plots</option>
+                  <option value="Commercial">Commercial</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Price (in INR)</label>
+                <input type="number" class="form-control" id="admPropPrice" required placeholder="18500000">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control" id="admPropLocation" required placeholder="Nagarbhavi, Bengaluru">
+              </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label">BHK / Type</label>
+                <input type="text" class="form-control" id="admPropBhk" required placeholder="3 BHK">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Square Feet (sqft)</label>
+                <input type="number" class="form-control" id="admPropSqft" required placeholder="2150">
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label">Image URL</label>
+              <input type="url" class="form-control" id="admPropImg" placeholder="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+            </div>
+
+            <button type="submit" class="btn btn-emerald w-100 py-2">Save & Publish Listing</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

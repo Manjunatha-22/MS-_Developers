@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery & 3D Tours | MS Developers Bengaluru</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner-golden"></div><div class="preloader-logo">MS <span>DEVELOPERS</span></div></div>
+
+  <!-- Top Bar & Navbar -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div><i class="fas fa-map-marker-alt text-secondary me-2"></i>Nagarbhavi, Bengaluru | <i class="fas fa-phone-alt text-secondary me-2 ms-3"></i>+91 8197287448</div>
+      <div class="d-flex gap-3"><a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a><a href="compare.html"><i class="fas fa-balance-scale"></i> Compare</a><a href="login.html"><i class="fas fa-user-circle"></i> Login</a></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="fas fa-building text-secondary"></i> MS <span class="gold-accent">DEVELOPERS</span></a>
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <a href="wishlist.html" class="badge-icon-btn"><i class="far fa-heart"></i><span class="badge-count" id="wishlist-count-badge">0</span></a>
+        <a href="compare.html" class="badge-icon-btn"><i class="fas fa-balance-scale"></i><span class="badge-count" id="compare-count-badge">0</span></a>
+        <button class="badge-icon-btn" id="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"><span class="navbar-toggler-icon"></span></button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <div class="page-header-banner">
+    <div class="container">
+      <h1>Media & Virtual Tours</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Gallery</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Gallery Grid -->
+  <section class="py-5">
+    <div class="container">
+      
+      <div class="text-center mb-4">
+        <button class="gallery-filter-btn active" data-filter="all">All Media</button>
+        <button class="gallery-filter-btn" data-filter="images">Photos</button>
+        <button class="gallery-filter-btn" data-filter="videos">Walkthrough Videos</button>
+        <button class="gallery-filter-btn" data-filter="virtual">360° Virtual Tour</button>
+      </div>
+
+      <div class="row g-4" id="gallery-container">
+        <!-- Item 1 -->
+        <div class="col-md-4 gallery-item-col" data-category="images">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80">
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80', 'MS Emerald Horizons Tower View')"><i class="fas fa-search-plus"></i></button>
+              <h5>Exterior Architecture</h5>
+              <p class="small text-white-50">MS Emerald Horizons</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-4 gallery-item-col" data-category="images">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', 'MS Royal Palms Villa Exterior')"><i class="fas fa-search-plus"></i></button>
+              <h5>Luxury Villa Facade</h5>
+              <p class="small text-white-50">Indiranagar Mansions</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 (Video) -->
+        <div class="col-md-4 gallery-item-col" data-category="videos">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80">
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80', 'HD Video Walkthrough')"><i class="fas fa-play"></i></button>
+              <h5>4K Video Walkthrough</h5>
+              <p class="small text-white-50">Sky Lounge Tour</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 (Virtual) -->
+        <div class="col-md-4 gallery-item-col" data-category="virtual">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80">
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80', '360 Degree Virtual Tour')"><i class="fas fa-vr-cardboard"></i></button>
+              <h5>360° Interactive VR</h5>
+              <p class="small text-white-50">Sample Villa Model</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col-md-4 gallery-item-col" data-category="images">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80">
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80', 'Commercial Hub Lobby')"><i class="fas fa-search-plus"></i></button>
+              <h5>Grand Lobby Design</h5>
+              <p class="small text-white-50">Whitefield Hub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white" id="lightboxTitle">Media Preview</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0 text-center">
+          <img src="" id="lightboxImg" class="img-fluid rounded-bottom" style="max-height: 80vh;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 MS Developers. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

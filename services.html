@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Services | MS Developers Bengaluru</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner-golden"></div><div class="preloader-logo">MS <span>DEVELOPERS</span></div></div>
+
+  <!-- Top Bar & Navbar -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div><i class="fas fa-map-marker-alt text-secondary me-2"></i>Nagarbhavi, Bengaluru | <i class="fas fa-phone-alt text-secondary me-2 ms-3"></i>+91 8197287448</div>
+      <div class="d-flex gap-3"><a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a><a href="compare.html"><i class="fas fa-balance-scale"></i> Compare</a><a href="login.html"><i class="fas fa-user-circle"></i> Login</a></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="fas fa-building text-secondary"></i> MS <span class="gold-accent">DEVELOPERS</span></a>
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <a href="wishlist.html" class="badge-icon-btn"><i class="far fa-heart"></i><span class="badge-count" id="wishlist-count-badge">0</span></a>
+        <a href="compare.html" class="badge-icon-btn"><i class="fas fa-balance-scale"></i><span class="badge-count" id="compare-count-badge">0</span></a>
+        <button class="badge-icon-btn" id="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"><span class="navbar-toggler-icon"></span></button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <div class="page-header-banner">
+    <div class="container">
+      <h1>Our Real Estate Services</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Services</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Services Grid -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-tag">Comprehensive Solutions</span>
+        <h2 class="section-title">End-To-End Real Estate Services</h2>
+        <p class="section-subtitle">Whether you're buying your first home or expanding your commercial portfolio, we provide full spectrum expertise.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. Buy Property -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon-wrapper"><i class="fas fa-home"></i></div>
+            <h4>Buy Luxury Property</h4>
+            <p class="text-muted">Explore verified 2/3/4 BHK apartments, independent villas & gated plots in prime Bengaluru belts with guaranteed clear title deeds.</p>
+            <ul class="service-features-list">
+              <li><i class="fas fa-check-circle"></i> Direct Builder Pricing</li>
+              <li><i class="fas fa-check-circle"></i> Free AC Cab Site Visits</li>
+              <li><i class="fas fa-check-circle"></i> Zero Brokerage Fees</li>
+            </ul>
+            <a href="callback.html" class="btn btn-outline-emerald btn-sm w-100 mt-3">Enquire Buying</a>
+          </div>
+        </div>
+
+        <!-- 2. Sell Property -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon-wrapper"><i class="fas fa-tags"></i></div>
+            <h4>Sell Your Property</h4>
+            <p class="text-muted">Get true market valuation and reach 50,000+ active NRI and local homebuyers across MS Developers buyer network.</p>
+            <ul class="service-features-list">
+              <li><i class="fas fa-check-circle"></i> Free Property Appraisal</li>
+              <li><i class="fas fa-check-circle"></i> 3D Virtual Tour Creation</li>
+              <li><i class="fas fa-check-circle"></i> Fast Legal Transfer</li>
+            </ul>
+            <a href="callback.html" class="btn btn-outline-emerald btn-sm w-100 mt-3">List Your Property</a>
+          </div>
+        </div>
+
+        <!-- 3. Rent Property -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon-wrapper"><i class="fas fa-key"></i></div>
+            <h4>Property Rental & Leasing</h4>
+            <p class="text-muted">Premium rental solutions for corporate executives, tech professionals, and retail brands seeking prime spaces in Indiranagar & Whitefield.</p>
+            <ul class="service-features-list">
+              <li><i class="fas fa-check-circle"></i> Verified Corporate Tenants</li>
+              <li><i class="fas fa-check-circle"></i> Rental Agreement Drafting</li>
+              <li><i class="fas fa-check-circle"></i> Tenant Background Verification</li>
+            </ul>
+            <a href="callback.html" class="btn btn-outline-emerald btn-sm w-100 mt-3">Explore Rentals</a>
+          </div>
+        </div>
+
+        <!-- 4. Home Loan Assistance -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon-wrapper"><i class="fas fa-landmark"></i></div>
+            <h4>Home Loan Assistance</h4>
+            <p class="text-muted">Hassle-free loan processing with institutional ties across SBI, HDFC, ICICI, Axis, offering preferential interest rates starting at 8.35%.</p>
+            <ul class="service-features-list">
+              <li><i class="fas fa-check-circle"></i> Doorstep Document Pickup</li>
+              <li><i class="fas fa-check-circle"></i> 72-Hour Sanction Guarantee</li>
+              <li><i class="fas fa-check-circle"></i> Tax Savings Guidance</li>
+            </ul>
+            <a href="emi-calculator.html" class="btn btn-outline-emerald btn-sm w-100 mt-3">Calculate Loan EMI</a>
+          </div>
+        </div>
+
+        <!-- 5. Property Legal Verification -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon-wrapper"><i class="fas fa-file-contract"></i></div>
+            <h4>Legal & Verification</h4>
+            <p class="text-muted">30-year search report verification, Khata A certificate audit, encumbrance check, and sale deed registration support.</p>
+            <ul class="service-features-list">
+              <li><i class="fas fa-check-circle"></i> High Court Advocate Panel</li>
+              <li><i class="fas fa-check-circle"></i> Encumbrance Certificate Audit</li>
+              <li><i class="fas fa-check-circle"></i> Registration Office Assistance</li>
+            </ul>
+            <a href="callback.html" class="btn btn-outline-emerald btn-sm w-100 mt-3">Book Legal Audit</a>
+          </div>
+        </div>
+
+        <!-- 6. Investment Advice -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon-wrapper"><i class="fas fa-chart-pie"></i></div>
+            <h4>Investment Advisory</h4>
+            <p class="text-muted">Data-driven real estate portfolio management providing high ROI, capital growth projections, and high-yield commercial leasing advice.</p>
+            <ul class="service-features-list">
+              <li><i class="fas fa-check-circle"></i> High Rental Yield Insights</li>
+              <li><i class="fas fa-check-circle"></i> Upcoming Metro Corridor Data</li>
+              <li><i class="fas fa-check-circle"></i> Tax Structuring for Real Estate</li>
+            </ul>
+            <a href="callback.html" class="btn btn-outline-emerald btn-sm w-100 mt-3">Consult Investment Expert</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 MS Developers. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

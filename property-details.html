@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details | MS Developers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/properties.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner-golden"></div><div class="preloader-logo">MS <span>DEVELOPERS</span></div></div>
+
+  <!-- Top Bar & Navbar -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div><i class="fas fa-map-marker-alt text-secondary me-2"></i>Nagarbhavi, Bengaluru | <i class="fas fa-phone-alt text-secondary me-2 ms-3"></i>+91 8197287448</div>
+      <div class="d-flex gap-3"><a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a><a href="compare.html"><i class="fas fa-balance-scale"></i> Compare</a><a href="login.html"><i class="fas fa-user-circle"></i> Login</a></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="fas fa-building text-secondary"></i> MS <span class="gold-accent">DEVELOPERS</span></a>
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <a href="wishlist.html" class="badge-icon-btn"><i class="far fa-heart"></i><span class="badge-count" id="wishlist-count-badge">0</span></a>
+        <a href="compare.html" class="badge-icon-btn"><i class="fas fa-balance-scale"></i><span class="badge-count" id="compare-count-badge">0</span></a>
+        <button class="badge-icon-btn" id="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"><span class="navbar-toggler-icon"></span></button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="properties.html">Properties</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Property Details Header -->
+  <section class="py-4 bg-white border-bottom">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+        <div>
+          <span class="badge bg-secondary text-white mb-2" id="detail-category-badge">Apartment</span>
+          <h2 class="fw-bold mb-1" id="detail-title">MS Emerald Horizons</h2>
+          <p class="text-muted mb-0"><i class="fas fa-map-marker-alt text-secondary me-2"></i><span id="detail-location">Nagarbhavi, Bengaluru</span></p>
+        </div>
+        <div class="text-lg-end">
+          <div class="text-muted small">Starting From</div>
+          <h2 class="text-secondary fw-bold mb-0" id="detail-price">₹ 1.85 Cr</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content & Gallery -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-lg-8">
+          <!-- Gallery -->
+          <div class="property-hero-gallery">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" id="mainDetailImg" class="main-prop-image shadow-sm rounded-4" alt="Main View">
+            <div class="prop-gallery-thumbs">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=300&q=80" class="active" onclick="changeDetailImg(this.src)">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=300&q=80" onclick="changeDetailImg(this.src)">
+              <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=300&q=80" onclick="changeDetailImg(this.src)">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=300&q=80" onclick="changeDetailImg(this.src)">
+            </div>
+          </div>
+
+          <!-- Overview & Description -->
+          <div class="ms-card p-4 mb-4">
+            <h4 class="fw-bold mb-3">Property Overview & Features</h4>
+            <div class="row g-3 text-center mb-4 p-3 rounded" style="background: var(--bg-main);">
+              <div class="col-3"><i class="fas fa-bed text-secondary fa-lg d-block mb-1"></i><span class="fw-bold" id="detail-bhk">3 BHK</span></div>
+              <div class="col-3"><i class="fas fa-bath text-secondary fa-lg d-block mb-1"></i><span class="fw-bold" id="detail-baths">3 Baths</span></div>
+              <div class="col-3"><i class="fas fa-ruler-combined text-secondary fa-lg d-block mb-1"></i><span class="fw-bold" id="detail-sqft">2150 sqft</span></div>
+              <div class="col-3"><i class="fas fa-key text-secondary fa-lg d-block mb-1"></i><span class="fw-bold" id="detail-status">Ready</span></div>
+            </div>
+            <p class="text-muted" id="detail-desc">Designed with Italian marble floors, floor-to-ceiling double glazed acoustic windows, smart biometric door lock system, and double balcony offering pristine views of Bengaluru skyline.</p>
+          </div>
+
+          <!-- Amenities -->
+          <div class="ms-card p-4 mb-4">
+            <h4 class="fw-bold mb-3">Luxury Amenities</h4>
+            <div id="detail-amenities-container">
+              <span class="amenity-pill"><i class="fas fa-swimming-pool"></i> Infinity Swimming Pool</span>
+              <span class="amenity-pill"><i class="fas fa-dumbbell"></i> Fully Equipped Gym</span>
+              <span class="amenity-pill"><i class="fas fa-shield-alt"></i> 24x7 Biometric Security</span>
+              <span class="amenity-pill"><i class="fas fa-charging-station"></i> EV Car Charging Point</span>
+              <span class="amenity-pill"><i class="fas fa-glass-cheers"></i> Rooftop Clubhouse</span>
+              <span class="amenity-pill"><i class="fas fa-child"></i> Kids Play Zone</span>
+            </div>
+          </div>
+
+          <!-- Floor Plans Tab -->
+          <div class="ms-card p-4 mb-4">
+            <h4 class="fw-bold mb-3">Floor & Master Plans</h4>
+            <ul class="nav nav-pills mb-3" role="tablist">
+              <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab2D">2D Unit Plan</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab3D">3D Layout</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tabMaster">Master Plan</button></li>
+            </ul>
+            <div class="tab-content text-center py-3">
+              <div class="tab-pane fade show active" id="tab2D">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" class="floor-plan-img rounded">
+              </div>
+              <div class="tab-pane fade" id="tab3D">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" class="floor-plan-img rounded">
+              </div>
+              <div class="tab-pane fade" id="tabMaster">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" class="floor-plan-img rounded">
+              </div>
+            </div>
+          </div>
+
+          <!-- Location Map -->
+          <div class="ms-card p-4">
+            <h4 class="fw-bold mb-3">Location & Neighborhood</h4>
+            <div style="height: 300px;" class="rounded overflow-hidden">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.978255909247!2d77.5113!3d12.9734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dd59d29841f%3A0x6b9d628867a0a0!2sNagarbhavi%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Agent Contact Sidebar -->
+        <div class="col-lg-4">
+          <div class="agent-card-sticky">
+            <div class="d-flex align-items-center gap-3 mb-4 pb-3 border-bottom">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
+              <div>
+                <h6 class="fw-bold mb-0">Rajesh Kumar</h6>
+                <small class="text-secondary fw-bold">Senior Relationship Manager</small>
+                <div class="text-muted small">+91 8197287448</div>
+              </div>
+            </div>
+
+            <h5 class="fw-bold mb-3">Inquire About This Property</h5>
+            <form onsubmit="event.preventDefault(); showToast('Inquiry sent successfully to Rajesh Kumar!', 'success'); this.reset();">
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Your Full Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="tel" class="form-control" placeholder="Your Phone Number" required>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" rows="3" placeholder="I am interested in MS Emerald Horizons. Please share pricing details."></textarea>
+              </div>
+              <button type="submit" class="btn btn-emerald w-100 mb-2"><i class="fas fa-paper-plane me-2"></i>Send Direct Message</button>
+            </form>
+
+            <hr class="my-3">
+            <div class="d-grid gap-2">
+              <a href="site-visit.html" class="btn btn-gold"><i class="fas fa-calendar-check me-2"></i>Book Site Visit</a>
+              <button onclick="showToast('Downloading E-Brochure PDF...', 'info')" class="btn btn-outline-emerald"><i class="fas fa-download me-2"></i>Download Brochure</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 MS Developers. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id') || 'prop-101';
+      const props = JSON.parse(localStorage.getItem('ms_properties') || '[]');
+      const prop = props.find(p => p.id === id) || props[0];
+
+      if (prop) {
+        document.getElementById('detail-title').innerText = prop.title;
+        document.getElementById('detail-price').innerText = prop.priceDisplay;
+        document.getElementById('detail-location').innerText = prop.location;
+        document.getElementById('detail-category-badge').innerText = prop.category;
+        document.getElementById('detail-bhk').innerText = prop.bhk;
+        document.getElementById('detail-baths').innerText = prop.bathrooms + ' Baths';
+        document.getElementById('detail-sqft').innerText = prop.sqft + ' sqft';
+        document.getElementById('detail-status').innerText = prop.status;
+        document.getElementById('detail-desc').innerText = prop.description;
+        document.getElementById('mainDetailImg').src = prop.image;
+      }
+    });
+
+    function changeDetailImg(src) {
+      document.getElementById('mainDetailImg').src = src;
+      document.querySelectorAll('.prop-gallery-thumbs img').forEach(img => img.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

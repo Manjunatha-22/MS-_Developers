@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Satva Developers Head Office Nagarbhavi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner-golden"></div><div class="preloader-logo">SATVA <span>DEVELOPERS</span></div></div>
+
+  <!-- Top Bar & Navbar -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div><i class="fas fa-map-marker-alt text-secondary me-2"></i>Nagarbhavi, Bengaluru | <i class="fas fa-phone-alt text-secondary me-2 ms-3"></i>+91 8197287448</div>
+      <div class="d-flex gap-3"><a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a><a href="compare.html"><i class="fas fa-balance-scale"></i> Compare</a><a href="login.html"><i class="fas fa-user-circle"></i> Login</a></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="fas fa-building text-secondary"></i> SATVA <span class="gold-accent">DEVELOPERS</span></a>
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <a href="wishlist.html" class="badge-icon-btn"><i class="far fa-heart"></i><span class="badge-count" id="wishlist-count-badge">0</span></a>
+        <a href="compare.html" class="badge-icon-btn"><i class="fas fa-balance-scale"></i><span class="badge-count" id="compare-count-badge">0</span></a>
+        <button class="badge-icon-btn" id="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"><span class="navbar-toggler-icon"></span></button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <div class="page-header-banner">
+    <div class="container">
+      <h1>Contact Corporate Head Office</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Contact Form & Info -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="ms-card p-4 p-md-5">
+            <h3 class="fw-bold mb-3">Send Us a Direct Message</h3>
+            <p class="text-muted mb-4">Our relationship team will get back to you within 2 business hours.</p>
+
+            <form onsubmit="event.preventDefault(); showToast('Thank you for contacting Satva Developers! We will reach out shortly.', 'success'); this.reset();">
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control form-control-custom" placeholder="John Doe" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control form-control-custom" placeholder="john@example.com" required>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label">Mobile Number</label>
+                  <input type="tel" class="form-control form-control-custom" placeholder="+91 8197287448" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Subject / Property Interest</label>
+                  <select class="form-select form-select-custom">
+                    <option>General Property Inquiry</option>
+                    <option>Book Site Visit</option>
+                    <option>Home Loan Assistance</option>
+                    <option>Legal Verification</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label">Your Message</label>
+                <textarea class="form-control form-control-custom" rows="4" placeholder="Tell us what you are looking for..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-emerald btn-lg w-100"><i class="fas fa-paper-plane me-2"></i>Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Office Info & Hours -->
+        <div class="col-lg-5">
+          <div class="ms-card p-4 h-100">
+            <h4 class="fw-bold mb-4">Corporate Office Details</h4>
+            
+            <div class="d-flex gap-3 mb-4">
+              <div class="feature-box-icon"><i class="fas fa-building"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">Office Address</h6>
+                <p class="text-muted small mb-0">Satva Developers<br>No. 25, 1st Main Road, Nagarbhavi,<br>Bengaluru – 560072, Karnataka, India</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-4">
+              <div class="feature-box-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">Phone Number</h6>
+                <p class="text-muted small mb-0">+91 8197287448</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-4">
+              <div class="feature-box-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">Official Email</h6>
+                <p class="text-muted small mb-0">info@satvadevelopers.in</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-4">
+              <div class="feature-box-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">Business Hours</h6>
+                <p class="text-muted small mb-0">Monday – Saturday: 9:00 AM – 7:00 PM<br>Sunday: 10:00 AM – 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google Map Frame -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="rounded-4 overflow-hidden shadow-sm" style="height: 400px;">
+            <iframe title="Satva Developers Office Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.978255909247!2d77.5113!3d12.9734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dd59d29841f%3A0x6b9d628867a0a0!2sNagarbhavi%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Satva Developers. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
